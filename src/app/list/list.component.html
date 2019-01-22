@@ -1,0 +1,8 @@
+<div class="list">jj
+  <h1>{{ list.name }}</h1>
+  
+  <div (click)="delete()">borrar</div>
+  <app-task *ngFor="let taskObj of list.tasks" [task]="taskObj"></app-task>
+  <input type="text" placeholder="add task" (keyup.enter)="addTask($event)"/>
+</div>
+
