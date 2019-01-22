@@ -1,7 +1,212 @@
 /* You can add global styles to this file, and also import other style files */
+
 * {
     font-family: Arial,Helvetica,sans-serif;
+}
+body {
     margin: 0;
-    padding: 0;
+   
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #eaeaea;
+}
+.visible{
+    display:none;
+}
+.hidden{
+    display:block;
+    background-color:white;
+    text-decoration: none;
+    padding: 7px;
+    margin: 0 0 8px;
+    border-radius: 3px;
+    color:  #0067a3;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+ 
+    cursor: pointer;
+    white-space: normal;
+    margin-top: 10px;
+    list-style: none;
+    display:block;
+    width: 100%;
+   background-color:#21b4e2;
+   color:white;
+    border:none;
+    box-sizing: border-box;
+
     
+}
+header, .cabecera{
+    background-color:#21b4e2;
+    padding: 5px;
+    height: 30px;
+}
+header span{
+    line-height: 30px;
+    font-weight: 700;
+    color: white;
+  
+    text-align: center; 
+}
+.center{
+    margin-right: auto;
+    margin-left: auto;
+    max-width:  350px;
+    display:flex;
+    justify-content: space-between;
+
+}
+.decabecera{
+    border-radius: 3px;
+ 
+    border:none;
+    padding: 7px;
+    background-color: #f1e767;
+
+}
+.titulo span{
+    color: white;
+    line-height: 100%;
+    margin-top: 8px;
+    font-weight: 700;
+    
+    font-size: 22px;
+    margin-bottom: 10px;
+    height: 18px;
+    width: 260px;
+ 
+    
+}
+.titulo{
+    display: flex;
+    justify-content:space-between;
+    padding-bottom: 20px;
+}
+.verde{
+  background-color: blue; 
+  width: 100%; 
+}
+.tarea{
+    background-color:white;
+    text-decoration: none;
+    padding: 7px;
+    margin: 0 0 8px;
+    border-radius: 3px;
+    color:  #999;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    font-stretch: normal;
+    font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+   
+    cursor: pointer;
+    white-space: normal;
+    word-wrap: break-word;
+    list-style: none;
+    
+    display: flex;
+    justify-content:space-between;
+    border:none;
+    
+  
+}
+.lista{
+    
+    border-radius: 5px;
+    width: 270px;
+    margin-left: 10px;
+    padding: 2px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: #2ba5bb;
+ 
+  
+    padding: 7px;
+    background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(33,180,226,1) 100%);
+}
+.container{
+    display:flex;
+    justify-content: space-around;
+    padding: 40px;
+    
+ 
+}
+.anadir span{
+font-size: 12px;
+color:white;
+margin-bottom: 20px;
+
+
+}
+ i{
+ margin-right: 15px; 
+ color:white;
+ font-size: 14px;
+}
+.tarea  i{
+    margin-right: 15px; 
+    color:#21b4e2;
+    
+   }
+input.anadir {
+    background-color:white;
+    text-decoration: none;
+    padding: 7px;
+    margin: 0 0 8px;
+    border-radius: 3px;
+    color:  #0067a3;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+ 
+    cursor: pointer;
+    white-space: normal;
+    margin-top: 10px;
+    list-style: none;
+    display:block;
+    width: 100%;
+   background-color:white;
+    border:none;
+    box-sizing: border-box;
+
+
+}
+input.anadirlista {
+    background-color:white;
+    text-decoration: none;
+    padding: 7px;
+    margin: 0 0 8px;
+    border-radius: 3px;
+    color:  #0067a3;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+ 
+    cursor: pointer;
+    white-space: normal;
+    margin-top: 10px;
+    list-style: none;
+    display:block;
+    width: 100%;
+   background-color:white;
+    border:none;
+    box-sizing: border-box;
+
+
 }

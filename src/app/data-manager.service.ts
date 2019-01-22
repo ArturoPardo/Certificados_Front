@@ -70,6 +70,9 @@ export class DataManagerService {
 getData() {
   return this.data;
 }
+getTask() {
+  return this.data.lists;
+}
 
 addNewList(name: string) {
   const now = new Date();
@@ -81,27 +84,40 @@ addNewList(name: string) {
     tasks: [],
   };
   this.data.lists.push(newList);
+ 
+}
+removerNombre(name: string ,list: List){
+console.log('data-valor', name , list);
+
+list.name=name;
+
 }
 
-addNewTask(name: string, list:List) {
-  const newTask: Task={
+removertaskGlobal2(text:string, task: Task){
 
-    listId: 0,
-    taskId: 0,
-    text: name,
-    completed: false,
-    color: 'white',
-    createdAt: new Date(),
-    modifiedAt: new Date(),
+console.log("TEXTO "+text+"TASK "+task.text);
+task.text=text;
 
 
+}
 
+addNewTask(text: string, list: List){
+  const newTask : Task = {
+      listId: list.listId,
+      taskId: Date.now(),
+      text,
+      color: '',
+      completed: false,
+      createdAt: new Date(),
+      modifiedAt: new Date()
   };
-  console.log('me esta llegando'+name);
-  console.log('me esta llegando'+newTask);
-  
-  this.lists.tasks.push(newTask);
  
+  this.data.lists = this.data.lists.map(listObj=>{
+    if(listObj.listId === list.listId){
+      listObj.tasks.push(newTask);
+    }
+    return listObj;
+  });
 }
 
 
@@ -110,8 +126,29 @@ addNewTask(name: string, list:List) {
 deleteList(listId: number) {
   this.data.lists = this.data.lists.filter(list => list.listId !== listId);
 }
+deleteTask(task:Task) {
+  console.log('mi id task' +task.taskId);
+  console.log('mi data'+this.data.lists);
 
-
+  this.data.lists = this.data.lists.map(listObj=>{
+    if(listObj.listId === task.listId){
+      console.log("premio");
+      listObj.tasks = listObj.tasks.filter(objTask => objTask.taskId !== task.taskId)
+    }
+    return listObj;
+  });
+  
+ 
+  
+}
+// removeTask(task:Task){
+//   this.data.arrayList = this.data.arrayList.map(objList =>{
+//      if(objList.listId === task.listId){
+//       objList.tasks = objList.tasks.filter(objTask => objTask.taskId !== task.taskId)
+//      }
+//      return objList
+//    });
+// }
 // ----me cargo el constructor
 
   

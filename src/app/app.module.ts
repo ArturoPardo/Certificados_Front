@@ -8,6 +8,9 @@ import { ListComponent } from './list/list.component';
 import { ShowListsComponent } from './show-lists/show-lists.component';
 import { AddNewListComponent } from './add-new-list/add-new-list.component';
 import { TaskComponent } from './task/task.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { ViewLoginComponent } from './view-login/view-login.component';
+import { ViewRegisterComponent } from './view-register/view-register.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { TaskComponent } from './task/task.component';
     ListComponent,
     ShowListsComponent,
     AddNewListComponent,
-    TaskComponent
+    TaskComponent,
+    MapaComponent,
+    ViewLoginComponent,
+    ViewRegisterComponent
   ],
   imports: [
     BrowserModule,

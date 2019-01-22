@@ -17,7 +17,7 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
     this.data = this.dataManager.getData();
     console.log(this.data);
-
+    
    
     console.log(this.task);
     // este dato

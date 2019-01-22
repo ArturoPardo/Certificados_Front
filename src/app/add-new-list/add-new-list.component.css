@@ -1,9 +1,0 @@
-.cabecera{
-    background-color: #0067a3;
-    padding: 5px;
-    height: 30px;
-}
-.input::placeholder {
-    all:unset;
-    background-color: aquamarine;
-}

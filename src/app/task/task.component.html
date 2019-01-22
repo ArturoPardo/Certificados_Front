@@ -1,3 +1,12 @@
-<div class="task">
-  <h4>{{ task.text }}</h4>
-</div>
+ 
+  <div class="tarea">
+   <span  (dblclick)="removerTask(task)"> {{ task.text }}</span>
+   <div><i class="fas fa-eye-dropper" (click)="removerTask(task)"></i><i class="fas fa-archive" (click)="delete(task)" ></i></div>
+   <!-- <span (click)="removerTask(task)">Mood</span> -->
+  </div>
+  
+  
+     <input class="{{ editing? 'visible' : 'hidden' }} " type="text" placeholder="modificar {{ task.text }}" (keyup.enter)="removertaskGlobal($event)">
+    
+     
+   

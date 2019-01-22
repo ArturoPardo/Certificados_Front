@@ -1,8 +1,21 @@
-<div class="list">jj
-  <h1>{{ list.name }}</h1>
+<div class="lista">
+ 
+  <div class="titulo">
+    <span (dblclick)="mostrarlist()">{{ list.name }}</span>
+    <div><i class="fas fa-eye-dropper" (click)="mostrarlist()"></i><i class="fas fa-archive"  (click)="delete()"></i></div>
+  </div>
   
-  <div (click)="delete()">borrar</div>
+  <!-- <div (click)="delete()">B</div> -->
+  <!-- <div (click)="mostrarlist()">M</div> -->
+  
+  <input  class="{{ variablelist? 'hidden' : 'visible' }} " type="text"  placeholder="{{ list.name }}"(keyup.enter)="removelistName($event)">
   <app-task *ngFor="let taskObj of list.tasks" [task]="taskObj"></app-task>
-  <input type="text" placeholder="add task" (keyup.enter)="addTask($event)"/>
+
+   <!-- <div class="anadir"><span (click)="mostrar()"> Add card...</span></div> -->
+  
+  
+  <input type="text" class="anadir" placeholder="..Add card" class="anadir" (keyup.enter)="addTask($event)">
+
+ 
 </div>
 

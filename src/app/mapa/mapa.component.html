@@ -1,0 +1,13 @@
+<div class="cabecera">
+  <div class="center">
+    <button (click)="mostrar()">Login </button>
+    <button (click)="mostrar()">Register</button>
+    </div>
+</div>
+
+<section class="center" *ngIf="!data">
+<app-view-login></app-view-login>
+</section>
+<section class="center" *ngIf="data">
+    <app-view-register></app-view-register>
+</section>
