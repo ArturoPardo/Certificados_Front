@@ -1,7 +1,11 @@
-<form action="https://apitrello.herokuapp.com/users" method="post" name="formu" id="formu" 
-     >
-     <h1>Registro</h1>
-   username: <input type="text" name="username" value=""><br>
-   password:   <input type="text" name="password" value="" size="20" maxlength="20"><br>
-              <input type="submit" value="   Enviar   ">
-</form>
+<app-navbar></app-navbar>
+
+<div class="center">
+  <h1>Register</h1>
+  <form (submit)="register()">
+    <input type="text" placeholder="username"  name="username" />
+    <input type="password" placeholder="password"  name="password" /> <input type="submit" value="Register" />
+    <div *ngIf="error">{{ error | json }}</div>
+    <div *ngIf="valid">Registered! <button routerLink="/login">Go to Login</button></div>
+    </form>
+    </div>

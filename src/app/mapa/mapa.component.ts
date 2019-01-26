@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mapa.component.css']
 })
 export class MapaComponent implements OnInit {
-  data:boolean=false;
-mostrar(){
+  login:boolean=false;
+  register:boolean=false;
+mostrarLogin(){
   console.log("aqui");
-  this.data=!this.data;
+  this.login=true;
+  this.register=false;
+}
+mostrarRegister(){
+  console.log("aqui");
+  this.register=true;
+  this.login=false;
 }
   constructor() { }
 

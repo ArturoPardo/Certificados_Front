@@ -11,6 +11,7 @@ import { TaskComponent } from './task/task.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { ViewLoginComponent } from './view-login/view-login.component';
 import { ViewRegisterComponent } from './view-register/view-register.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ViewRegisterComponent } from './view-register/view-register.component';
     TaskComponent,
     MapaComponent,
     ViewLoginComponent,
-    ViewRegisterComponent
+    ViewRegisterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
